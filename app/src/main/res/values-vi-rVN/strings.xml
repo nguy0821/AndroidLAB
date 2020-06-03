@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">Xin Chào!</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="app_name">Lab2</string>
+    <string name="message">Nhìn vào GUI của tôi</string>
+    <string name="ButtonText">TÔI LÀ CHIẾC NÚT</string>
+    <string name="toast_message">Đây là nhiều thông tin hơn</string>
+    <string name="snackbar_checkbox">Chiếc hộp kiểm tra đã hoạt động</string>
+    <string name="snackbar_switch">Đã bật</string>
+    <string name="checkbox">Đánh dấu vào đây</string>
+    <string name="switch_mess">Bật/Tắt</string>
+    <string name="edit_text">NHẬP VĂN BẢN Ở ĐÂY</string>
+    <string name="undo">Trở lại</string>
 </resources>
