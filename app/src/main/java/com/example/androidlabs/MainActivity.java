@@ -1,40 +1,52 @@
 package com.example.androidlabs;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Switch;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+    EditText emailField;
+    SharedPreferences mPrefs;
+    Button loginBtn;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_linear);
 
-        Button mbutton = findViewById(R.id.myButton);
-        mbutton.setOnClickListener(v -> Toast.makeText(MainActivity.this
-                , getResources().getString(R.string.toast_message)
-                , Toast.LENGTH_LONG).show());
+        emailField = findViewById(R.id.typeEmail);
+        mPrefs = getSharedPreferences("filename", Context.MODE_PRIVATE);
+        String savedString = mPrefs.getString("ReserveName", "Default value");
 
+        emailField.setHint(savedString);
 
-        CheckBox mycheckBox = findViewById(R.id.checkbox);
-        mycheckBox.setOnCheckedChangeListener(((buttonView, isChecked) -> {
-            Snackbar.make(mycheckBox, getResources().getString(R.string.snackbar_checkbox), Snackbar.LENGTH_LONG )
-                    .setAction(getResources().getString(R.string.undo), v->mycheckBox.setChecked(false))
-                    .show();
-        }));
+        loginBtn = findViewById(R.id.myButton);
+        loginBtn.setOnClickListener( c -> {
 
-        Switch mySwitch = findViewById(R.id.mySwitch);
-        mySwitch.setOnCheckedChangeListener(((buttonView, isChecked) -> {
-            Snackbar.make(mySwitch, getResources().getString(R.string.snackbar_switch), Snackbar.LENGTH_INDEFINITE )
-                    .setAction(getResources().getString(R.string.undo), v->mySwitch.setChecked(false))
-                    .show();
-        }));
+            Intent goToProfile  = new Intent(this, ProfileActivity.class);
+            EditText et = findViewById(R.id.typeEmail);
+            goToProfile.putExtra("EMAIL", et.getText().toString());
+            startActivityForResult( goToProfile , 456);
+        });
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences.Editor editor = mPrefs.edit();
+        emailField = findViewById(R.id.typeEmail);
+        String saveEmail = emailField.getText().toString();
+        editor.putString("ReserveName", saveEmail);
+        editor.commit();
+
     }
 }

@@ -10,34 +10,54 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textEmail"
-        />
+        android:text="@string/profile"
 
-    <EditText
-        android:id="@+id/typeEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/typeEmail"
-        android:inputType="textEmailAddress"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textPassword"
+        android:text="@string/name"
+
+        />
+    <EditText
+        android:id="@+id/enterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|textCapWords"
+        android:hint="@string/enterName"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
         />
 
     <EditText
+        android:id="@+id/enterEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
+        android:hint="@string/enterEmail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/picture"
         />
 
-    <Button
-        android:id="@+id/myButton"
+    <ImageButton
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:src="@android:drawable/picture_frame"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/click"
         />
 
 </LinearLayout>
