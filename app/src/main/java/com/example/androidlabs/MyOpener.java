@@ -12,12 +12,12 @@ import androidx.annotation.Nullable;
 
 class MyOpener extends SQLiteOpenHelper {
 
-    private static final String DB_NAME= "MessageDB";
-    private static final String DB_TABLE= "MessageTB";
+    public static final String DB_NAME= "MessageDB";
+    public static final String DB_TABLE= "MessageTB";
     //columns
-    private static final String COLUMN_MESSAGE = "Message";
-    private static final String COLUMN_IS_SEND = "IsSent";
-    private static final String COLUMN_MESSAGE_ID = "MessageID";
+    public static final String COLUMN_MESSAGE = "Message";
+    public static final String COLUMN_IS_SEND = "IsSent";
+    public static final String COLUMN_MESSAGE_ID = "MessageID";
     //Queries
     private static final String CREATE_TABLE = "CREATE TABLE "+DB_TABLE+" ("+COLUMN_MESSAGE_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "                                  "+ COLUMN_MESSAGE+" TEXT, "

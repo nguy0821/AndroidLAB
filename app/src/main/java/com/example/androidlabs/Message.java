@@ -11,7 +11,9 @@ public class Message {
         this.messageID= id;
     }
 
-    public Message() {
+    public Message(String message, boolean isSent ) {
+        this.message = message;
+        this.isSent = isSent;
     }
 
     public String getMessage() {
