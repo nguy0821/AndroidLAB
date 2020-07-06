@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -18,10 +20,18 @@ public class ProfileActivity extends AppCompatActivity {
 
     ImageButton mImageButton;
 
+    public  void  gotoChat(View v){
+        Log.i("go", "gotochat");
+        Intent chatActivity = new Intent(v.getContext(),ChatRoomActivity.class);
+        startActivity(chatActivity);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        Button gotoChatBtn = findViewById(R.id.gotoChat);
 
         Intent fromMain = getIntent();
         String emailTyped = fromMain.getStringExtra("EMAIL");
@@ -41,6 +51,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         });
         Log.e(ACTIVITY_NAME, "In function: onCreate()");
+
+        gotoChatBtn.setOnClickListener(this::gotoChat);
+
+
+
     }
 
     private void dispatchTakePictureIntent() {

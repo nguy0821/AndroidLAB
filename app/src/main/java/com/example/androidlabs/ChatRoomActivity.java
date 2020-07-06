@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     MyOpener db;
     List<Message> messagesLists = new ArrayList<>();
 
-
+    ChatAdapter chatAdapter;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         sendButton = (Button) findViewById(R.id.SendBtn);
         receiveButton = (Button) findViewById(R.id.ReceiveBtn);
         db = new MyOpener(this);
+        chatAdapter = new ChatAdapter(messagesLists, getApplicationContext());
 
         viewData();
 
@@ -63,12 +65,25 @@ public class ChatRoomActivity extends AppCompatActivity {
         //delete
         listView.setOnItemLongClickListener((parent, view, position, id) -> {
 
-            db.DeleteData(id);
+//            db.DeleteData(id);
+            Message message = messagesLists.get(position);
+//            messagesLists.remove(id);
+//            Toast.makeText(ChatRoomActivity.this, "Message deleted", Toast.LENGTH_SHORT).show();
+//            messagesLists.clear();
+//            viewData();
 
-            messagesLists.remove(id);
-            Toast.makeText(ChatRoomActivity.this, "Message deleted", Toast.LENGTH_SHORT).show();
-            messagesLists.clear();
-            viewData();
+
+            new AlertDialog.Builder(parent.getContext())
+                    .setTitle("Do you want to delete this")
+                    .setMessage("The selected row is: " + position +
+                            "\nTHe database id is: " +message.getMessageID())
+                    .setPositiveButton("Delete", (dialog, which)->{
+                        db.DeleteData(message.messageID);
+                        messagesLists.remove(position);
+                        chatAdapter.notifyDataSetChanged();
+                    })
+                    .setNegativeButton("Cancel",null)
+                    .show();
 
             return true;
 //            try {
@@ -110,9 +125,10 @@ public class ChatRoomActivity extends AppCompatActivity {
         if(cursor.getCount() !=0){
             while (cursor.moveToNext()){
                 Message message = new Message(cursor.getString(1),
-                        cursor.getInt(2)==0 ?true:false);
+                        cursor.getInt(2)==0 ?true:false,
+                        cursor.getLong(0)
+                );
                 messagesLists.add(message);
-                ChatAdapter chatAdapter = new ChatAdapter(messagesLists, getApplicationContext());
                 listView.setAdapter( chatAdapter);
             }
         }

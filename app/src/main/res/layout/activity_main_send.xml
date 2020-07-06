@@ -10,10 +10,12 @@
 
     <View
         android:id="@+id/receiverAvatar"
-        android:layout_alignParentRight="true"
-        android:scaleType="centerInside"
         android:layout_width="34dp"
-        android:layout_height="34dp" />
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:background="#FFFFFF"
+        android:foreground="@drawable/row_send"
+        android:scaleType="centerInside" />
 
     <TextView
         android:id="@+id/receiverName"

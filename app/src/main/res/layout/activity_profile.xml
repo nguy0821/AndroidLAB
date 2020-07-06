@@ -60,4 +60,11 @@
         android:text="@string/click"
         />
 
+    <Button
+        android:id="@+id/gotoChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="gotoChat"
+        android:text="Go To Chat" />
+
 </LinearLayout>

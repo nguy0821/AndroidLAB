@@ -5,9 +5,10 @@ public class Message {
     public boolean isSent;
     public long messageID;
 
-    public Message(String message, boolean isSent ) {
+    public Message(String message, boolean isSent , long id) {
         this.message = message;
         this.isSent = isSent;
+        this.messageID= id;
     }
 
     public Message() {
