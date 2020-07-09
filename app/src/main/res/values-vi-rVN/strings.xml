@@ -24,7 +24,7 @@
     <string name="click">Nhấn vào nút này để chụp hình</string>
     <string name="GoToChatText">Đến khung Chat</string>
     <string name="SendText">Gửi</string>
-    <string name="ReceiveText">Đến</string>
+    <string name="ReceiveText">Nhận</string>
     <string name="ChatHint">Điền tại đây</string>
     <string name="receiver">Bạn thân</string>
 </resources>
