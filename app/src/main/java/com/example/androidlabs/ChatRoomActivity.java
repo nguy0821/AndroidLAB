@@ -7,12 +7,12 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
@@ -116,7 +116,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         Log.e("Count:", cursor.getCount() + "");
         Log.e("Database version:", database.getVersion() + "");
         Log.e("Number of columns:", cursor.getColumnCount() + "");
-        Log.e("Name of the columns:", cursor.getColumnNames().toString());
+        Log.e("Name of the columns:", Arrays.toString(cursor.getColumnNames()));
         Log.e("Number of cursor", cursor.getCount() + "");
         Log.e("Row:", "");
 
