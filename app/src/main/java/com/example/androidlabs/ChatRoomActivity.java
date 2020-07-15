@@ -82,7 +82,6 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
         });
 
-
         //delete
         listView.setOnItemLongClickListener((parent, view, position, id) -> {
 
