@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources  xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Lab 4+5</string>
+    <string name="app_name">Lab 6</string>
     <string name="message">Nhìn vào GUI của tôi</string>
     <string name="ButtonText">Nhấn đây</string>
     <string name="edit_text">Nhập văn bản ở đây</string>
@@ -22,9 +22,14 @@
     <string name="enterName">Đăng nhập tên của bạn</string>
     <string name="picture">Hình ảnh của bạn:</string>
     <string name="click">Nhấn vào nút này để chụp hình</string>
-    <string name="GoToChatText">Đi Đến khung Chat</string>
+    <string name="GoToChatText">Đến khung Chat</string>
     <string name="SendText">Gửi</string>
-    <string name="ReceiveText">Nhận</string>
+    <string name="ReceiveText">Đến</string>
     <string name="ChatHint">Điền tại đây</string>
     <string name="receiver">Bạn thân</string>
+    <string name="GoToWeather">Đi Đến Thời Tiết</string>
+    <string name="currentTemp">Nhiệt độ hiện tại</string>
+    <string name="minTemp">Nhiệt độ thấp nhất</string>
+    <string name="maxTemp">Nhiệt độ cao nhất</string>
+    <string name="UV">Tia UV</string>
 </resources>

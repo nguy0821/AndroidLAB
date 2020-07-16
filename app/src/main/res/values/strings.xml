@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">Lab 4+5</string>
+    <string name="app_name">Lab 6</string>
     <string name="message">Look at my GUI</string>
     <string name="ButtonText">CLICK HERE</string>
     <string name="edit_text">Type here</string>
@@ -25,5 +25,10 @@
     <string name="ReceiveText">Receive</string>
     <string name="ChatHint">Type here</string>
     <string name="receiver">My best friend</string>
+    <string name="GoToWeather">Go To Weather</string>
+    <string name="currentTemp">Current temp</string>
+    <string name="minTemp">Min Temp</string>
+    <string name="maxTemp">Max Temp</string>
+    <string name="UV">Uv Rating</string>
 </resources>
 

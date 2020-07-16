@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
 
     ImageButton mImageButton;
-
+    Button goToWeatherBtn;
     public  void  gotoChat(View v){
         Log.i("go", "gotochat");
         Intent chatActivity = new Intent(v.getContext(),ChatRoomActivity.class);
@@ -50,6 +50,18 @@ public class ProfileActivity extends AppCompatActivity {
 //            }
 
         });
+
+
+        goToWeatherBtn = (Button)findViewById(R.id.GoToWeatherPage);
+        goToWeatherBtn.setOnClickListener(c -> {
+            Intent goToMenuPage = new Intent(ProfileActivity.this, WeatherForecast.class);
+
+            startActivityForResult(goToMenuPage, 234);
+
+        });
+
+
+
         Log.e(ACTIVITY_NAME, "In function: onCreate()");
 
         gotoChatBtn.setOnClickListener(this::gotoChat);

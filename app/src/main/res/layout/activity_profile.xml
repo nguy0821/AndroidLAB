@@ -67,4 +67,12 @@
         android:onClick="gotoChat"
         android:text="Go To Chat" />
 
+    <Button
+        android:id="@+id/GoToWeatherPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/GoToWeather"
+        />
 </LinearLayout>
