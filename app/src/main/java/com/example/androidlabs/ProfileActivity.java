@@ -31,16 +31,16 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        Button gotoChatBtn = findViewById(R.id.gotoChat);
+        Button gotoChatBtn = findViewById(R.id.item4);
 
         Intent fromMain = getIntent();
         String emailTyped = fromMain.getStringExtra("EMAIL");
 
         //Put the string that was sent from FirstActivity into the edit text:
-        EditText emailEditText = (EditText)findViewById(R.id.enterEmail);
+        EditText emailEditText = (EditText)findViewById(R.id.item2);
         emailEditText.setText(emailTyped);
 
-        mImageButton = (ImageButton) findViewById(R.id.image);
+        mImageButton = (ImageButton) findViewById(R.id.item3);
         mImageButton.setOnClickListener(c -> {
             dispatchTakePictureIntent();
 //
@@ -52,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
-        goToWeatherBtn = (Button)findViewById(R.id.GoToWeatherPage);
+        goToWeatherBtn = (Button)findViewById(R.id.item5);
         goToWeatherBtn.setOnClickListener(c -> {
             Intent goToMenuPage = new Intent(ProfileActivity.this, WeatherForecast.class);
 

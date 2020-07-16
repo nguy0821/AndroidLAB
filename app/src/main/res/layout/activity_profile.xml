@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
@@ -19,60 +24,103 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
 
+
+
         />
     <EditText
-        android:id="@+id/enterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName|textCapWords"
         android:hint="@string/enterName"
+
+
+        android:id="@+id/item1"
+        android:nextFocusDown="@id/item2"
+        android:nextFocusUp="@id/item5"
+        android:nextFocusRight="@id/item1"
+        android:nextFocusLeft="@id/item1"
+
+
+
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/email"
-        />
 
+
+        />
+    <!--    android:id="@+id/enterEmail"-->
     <EditText
-        android:id="@+id/enterEmail"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="@string/enterEmail"/>
+        android:hint="@string/enterEmail"
+
+        android:id="@+id/item2"
+        android:nextFocusDown="@id/item3"
+        android:nextFocusUp="@id/item1"
+        android:nextFocusRight="@id/item2"
+        android:nextFocusLeft="@id/item2"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/picture"
+
+
         />
+    <!--    android:id="@+id/image"-->
 
     <ImageButton
-        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@android:drawable/picture_frame"
+
+        android:id="@+id/item3"
+        android:nextFocusDown="@id/item4"
+        android:nextFocusUp="@id/item1"
+        android:nextFocusRight="@id/item3"
+        android:nextFocusLeft="@id/item3"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/click"
+
+
         />
+    <!--    android:id="@+id/gotoChat"-->
 
     <Button
-        android:id="@+id/gotoChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="gotoChat"
-        android:text="Go To Chat" />
+        android:text="Go To Chat"
+        tools:ignore="OnClick"
+
+        android:id="@+id/item4"
+        android:nextFocusDown="@id/item5"
+        android:nextFocusUp="@id/item1"
+        android:nextFocusRight="@id/item4"
+        android:nextFocusLeft="@id/item4"
+        />
+    <!--    android:id="@+id/GoToWeatherPage"-->
 
     <Button
-        android:id="@+id/GoToWeatherPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:text="@string/GoToWeather"
+
+        android:id="@+id/item5"
+        android:nextFocusDown="@id/item1"
+        android:nextFocusUp="@id/item2"
+        android:nextFocusRight="@id/item5"
+        android:nextFocusLeft="@id/item5"
         />
 </LinearLayout>

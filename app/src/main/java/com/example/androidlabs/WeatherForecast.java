@@ -1,7 +1,5 @@
 package com.example.androidlabs;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +11,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
@@ -61,7 +61,7 @@ public class WeatherForecast extends AppCompatActivity {
         protected String doInBackground(String ... params) {
             try {
 
-                // the string URL
+                //get the string url:
                 String myUrl = params[0];
 
                 //create the network connection:
