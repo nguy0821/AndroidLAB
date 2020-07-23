@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">Lab 6</string>
+    <string name="app_name">Lab 7</string>
     <string name="message">Look at my GUI</string>
     <string name="ButtonText">CLICK HERE</string>
     <string name="edit_text">Type here</string>
@@ -30,5 +30,9 @@
     <string name="minTemp">Min Temp</string>
     <string name="maxTemp">Max Temp</string>
     <string name="UV">Uv Rating</string>
+    <string name="messfragment"> Message Here</string>
+    <string name="IDtext"> ID= </string>
+    <string name="hideButton"> HIDE </string>
+    <string name="isSENDmess"> Is a Send Message </string>
 </resources>
 

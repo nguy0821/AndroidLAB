@@ -32,4 +32,8 @@
     <string name="minTemp">Nhiệt độ thấp nhất</string>
     <string name="maxTemp">Nhiệt độ cao nhất</string>
     <string name="UV">Tia UV</string>
+    <string name="messfragment">Tin nhắn ở đây</string>
+    <string name="IDtext">ID=</string>
+    <string name="hideButton">ẨN</string>
+    <string name="isSENDmess">Đây là một tin nhắn gửi đi</string>
 </resources>

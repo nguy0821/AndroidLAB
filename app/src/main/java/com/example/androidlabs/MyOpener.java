@@ -58,15 +58,27 @@ class MyOpener extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    //delete row
-    public void DeleteData( long id) {
+//    //delete row
+//    public void DeleteData( long id) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+////        ContentValues contentValues = new ContentValues();
+////        contentValues.remove(COLUMN_MESSAGE,M);
+//        db.delete(DB_TABLE, COLUMN_MESSAGE_ID + " = ?",
+//                new String[] {String.valueOf(id) });
+//        db.close();
+//    }
+
+
+    //delete LAB8
+    public int deleteEHIDE(int id)
+    {
         SQLiteDatabase db = this.getWritableDatabase();
-//        ContentValues contentValues = new ContentValues();
-//        contentValues.remove(COLUMN_MESSAGE,M);
-        db.delete(DB_TABLE, COLUMN_MESSAGE_ID + " = ?",
-                new String[] {String.valueOf(id) });
-        db.close();
+        String where="MessageID=?";
+        int numberOFEntriesDeleted= db.delete(DB_TABLE, where, new String[]{Integer.toString(id)});
+        return numberOFEntriesDeleted;
     }
+
+
 
     //ViewData dung de xem => dung getRead
     public Cursor viewData(){
