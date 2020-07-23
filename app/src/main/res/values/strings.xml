@@ -24,7 +24,7 @@
     <string name="SendText">Send</string>
     <string name="ReceiveText">Receive</string>
     <string name="ChatHint">Type here</string>
-    <string name="receiver">My best friend</string>
+    <string name="receiver">Tommy</string>
     <string name="GoToWeather">Go To Weather</string>
     <string name="currentTemp">Current temp</string>
     <string name="minTemp">Min Temp</string>

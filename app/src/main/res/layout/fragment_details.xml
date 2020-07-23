@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailsFragment"
     android:id="@+id/fragmentLocation"
-    android:background="#ff77"
+
     >
 
     <!-- TODO: Update blank fragment layout -->
