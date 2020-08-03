@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">Xin Chào!</string>
-    <string name="ButtonText">I\’m a button</string>
+<resources  xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">Lab 4+5</string>
+    <string name="message">Nhìn vào GUI của tôi</string>
+    <string name="ButtonText">Nhấn đây</string>
+    <string name="edit_text">Nhập văn bản ở đây</string>
+    <string name="toast_message">Đây là nhiều thông tin hơn</string>
+    <string name="snackbar_checkbox">Hộp kiểm tra đang hoạt động</string>
+    <string name="snackbar_switch">Đã bật</string>
+    <string name="checkbox">Kiểm tra!</string>
+    <string name="switch_mess">Bật/Tắt</string>
+    <string name="undo">Trở lại</string>
+    <string name="textEmail">Đăng nhập thư điện tử của bạn:</string>
+    <string name="textPassword">Nhập mật khẩu của bạn:</string>
+    <string name="typeEmail">Nhập địa chỉ thư điện tử của bạn:</string>
+    <string name="login">Đăng nhập</string>
+    <string name="profile">Hồ sơ của bạn</string>
+    <string name="name">Tên của bạn:</string>
+    <string name="email">Thư điện tử của bạn:</string>
+    <string name="enterEmail">Đăng nhập thư điện tử của bạn</string>
+    <string name="enterName">Đăng nhập tên của bạn</string>
+    <string name="picture">Hình ảnh của bạn:</string>
+    <string name="click">Nhấn vào nút này để chụp hình</string>
+    <string name="GoToChatText">Đi Đến khung Chat</string>
+    <string name="SendText">Gửi</string>
+    <string name="ReceiveText">Nhận</string>
+    <string name="ChatHint">Điền tại đây</string>
+    <string name="receiver">Bạn thân</string>
 </resources>

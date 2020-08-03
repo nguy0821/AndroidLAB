@@ -1,5 +1,29 @@
-<resources>
-    <string name="app_name">Lab1</string>
-    <string name="hello_message">Hello World!</string>
-    <string name="ButtonText">I\’m a button</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Lab 4+5</string>
+    <string name="message">Look at my GUI</string>
+    <string name="ButtonText">CLICK HERE</string>
+    <string name="edit_text">Type here</string>
+    <string name="toast_message">Here is more information</string>
+    <string name="snackbar_checkbox">The Check Box is now</string>
+    <string name="snackbar_switch">The switch is now</string>
+    <string name="checkbox">Check this out!</string>
+    <string name="switch_mess">Switch on / off</string>
+    <string name="undo">Undo</string>
+    <string name="textEmail">Enter your email address:</string>
+    <string name="textPassword">Type your password:</string>
+    <string name="typeEmail">Type email here</string>
+    <string name="login">LOGIN</string>
+    <string name="profile">Your profile</string>
+    <string name="name">Your name:</string>
+    <string name="email">Your email:</string>
+    <string name="enterEmail">Enter your email</string>
+    <string name="enterName">Enter your name</string>
+    <string name="picture">Your picture:</string>
+    <string name="click">Click the button above to take a picture</string>
+    <string name="GoToChatText">Go To Chat</string>
+    <string name="SendText">Send</string>
+    <string name="ReceiveText">Receive</string>
+    <string name="ChatHint">Type here</string>
+    <string name="receiver">My best friend</string>
 </resources>
+
